@@ -1,6 +1,6 @@
-# Strategic Market Analysis — Conagra's Gardein 🥬
+# Strategic Market Analysis - Conagra's Gardein 🥬
 
-> **UT Dallas MSBA capstone (Group 7)** — A strategic analytics case study on Conagra's Gardein brand in the U.S. frozen meat-substitute category. Benchmarks **Gardein vs Morningstar Farms** and the broader competitive set using multi-year retail POS data, **multivariate regression** on dollar sales, and geographic opportunity mapping.
+> **UT Dallas MSBA capstone (Group 7)** - A strategic analytics case study on Conagra's Gardein brand in the U.S. frozen meat-substitute category. Benchmarks **Gardein vs Morningstar Farms** and the broader competitive set using multi-year retail POS data, **multivariate regression** on dollar sales, and geographic opportunity mapping.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat&logo=jupyter&logoColor=white)
@@ -18,7 +18,7 @@ Gardein sits in a crowded and rapidly shifting plant-based frozen category. Mana
 
 1. **Where is Gardein winning and losing** relative to Morningstar Farms and the broader competitive set?
 2. **Which product and pricing levers** (pack size, price per unit, distribution, meat source, flavor) most influence dollar sales?
-3. **Which U.S. geographies** offer the strongest growth opportunity — and why?
+3. **Which U.S. geographies** offer the strongest growth opportunity - and why?
 
 ## 🔍 Approach
 
@@ -34,10 +34,10 @@ Gardein sits in a crowded and rapidly shifting plant-based frozen category. Mana
 
 ## 📊 Key Findings *(see the [Final Report](./FINAL%20REPORT.pdf) for details)*
 
-*High-level takeaways — for full coefficients, significance tests, and recommendations, see the PDF report and slide deck.*
+*High-level takeaways - for full coefficients, significance tests, and recommendations, see the PDF report and slide deck.*
 
 - Dollar sales are driven most strongly by **ACV-weighted distribution** and **price per unit**, with meaningful secondary effects from **pack size** and **product type**.
-- **Gardein vs Morningstar Farms** positioning diverges on health messaging, ingredient innovation, and sustainability — each with distinct implications for shelf strategy.
+- **Gardein vs Morningstar Farms** positioning diverges on health messaging, ingredient innovation, and sustainability - each with distinct implications for shelf strategy.
 - Regional performance shows asymmetric opportunity: certain geographies over-index on the category but under-index on Gardein, flagging clear white-space for distribution expansion.
 
 ---
@@ -60,7 +60,7 @@ Ashish Patil · **Isha Narkhede** · Javed Mohammed · Neha Govekar · Pallavi S
 
 ### 👤 My contribution (Isha)
 
-*[Fill this section in — recruiters specifically look for it on team projects. A few concrete sentences on what you personally owned is far stronger than silence. Examples of angles to cover:]*
+*[Fill this section in - recruiters specifically look for it on team projects. A few concrete sentences on what you personally owned is far stronger than silence. Examples of angles to cover:]*
 
 - *What workstream did you lead or co-lead? (e.g., "Led the regression modeling and feature engineering from product description strings")*
 - *What technical pieces are yours? (e.g., "Built the VIF diagnostics and final OLS specification in `reg.ipynb`")*
@@ -72,12 +72,12 @@ Ashish Patil · **Isha Narkhede** · Javed Mohammed · Neha Govekar · Pallavi S
 
 | File | What it is |
 |---|---|
-| [`FINAL REPORT.pdf`](./FINAL%20REPORT.pdf) | **Written report** — objectives, EDA, regression results, recommendations (main deliverable) |
-| [`Group_7.pptx`](./Group_7.pptx) | **Executive slide deck** — summarized findings for presentation |
-| `reg.ipynb` | Regression modeling notebook — feature engineering, VIF, OLS fit, diagnostics |
-| `Geography_based_visualization.ipynb` | Regional analysis notebook — geography cuts, multi-year panels, maps |
-| `2023_MorningStar_Gardein.xlsx` | Competitor POS data — Morningstar Farms + Gardein |
-| `2023_Other_Brand_Data.xlsx` | Broader category POS data — other competing brands |
+| [`FINAL REPORT.pdf`](./FINAL%20REPORT.pdf) | **Written report** - objectives, EDA, regression results, recommendations (main deliverable) |
+| [`Group_7.pptx`](./Group_7.pptx) | **Executive slide deck** - summarized findings for presentation |
+| `reg.ipynb` | Regression modeling notebook - feature engineering, VIF, OLS fit, diagnostics |
+| `Geography_based_visualization.ipynb` | Regional analysis notebook - geography cuts, multi-year panels, maps |
+| `2023_MorningStar_Gardein.xlsx` | Competitor POS data - Morningstar Farms + Gardein |
+| `2023_Other_Brand_Data.xlsx` | Broader category POS data - other competing brands |
 
 ## ⚙️ Reproducing the Analysis
 
