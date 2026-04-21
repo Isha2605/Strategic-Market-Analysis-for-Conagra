@@ -1,95 +1,111 @@
-# Gardein growth analytics — meat substitute market intelligence
+# Strategic Market Analysis — Conagra's Gardein 🥬
 
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat&logo=jupyter&logoColor=white)](https://jupyter.org/)
+> **UT Dallas MSBA capstone (Group 7)** — A strategic analytics case study on Conagra's Gardein brand in the U.S. frozen meat-substitute category. Benchmarks **Gardein vs Morningstar Farms** and the broader competitive set using multi-year retail POS data, **multivariate regression** on dollar sales, and geographic opportunity mapping.
 
-Strategic analytics project for **Conagra’s Gardein** brand in the U.S. **frozen meat substitute** category. Using multi-year retail-style POS data, we benchmark **Gardein vs Morningstar Farms** (and the broader competitive set), run **exploratory and bivariate analysis**, engineer features from product text, and fit **multivariate regression** models to explain **dollar sales** and highlight **geographic** opportunities.
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat&logo=jupyter&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![statsmodels](https://img.shields.io/badge/statsmodels-8CAAE6?style=flat)
+![Category-CPG](https://img.shields.io/badge/Category-CPG%20%2F%20Frozen-green?style=flat)
 
-> **Disclaimer:** This repository contains academic / course-style analytics and narrative deliverables. It is **not** an official Conagra or Gardein publication. Insights are for learning and portfolio use unless separately authorized.
-
----
-
-## Highlights
-
-| Theme | What we did |
-|--------|-------------|
-| **Market structure** | Compared category and sub-segment share (e.g. original “meat source” flavour mix vs plant-based substitutes). |
-| **Competitive intelligence** | Synthesized positioning patterns (health messaging, sustainability, ingredient innovation, partnerships). |
-| **Modeling** | Multivariate regression on dollar sales with distribution, price, pack size, product, brand, meat source, and geography; assessed fit and key coefficients. |
-| **Geography** | Regional deep dives and visualizations to align sales performance with regression-based regional effects. |
+> **📄 Deliverables:** 🔗 [**Final Report (PDF)**](./FINAL%20REPORT.pdf) · 🔗 [**Executive Deck (PPTX)**](./Group_7.pptx)
 
 ---
 
-## Visuals (placeholders — add your exports)
+## 🎯 Business Question
 
-Replace the paths below with images in a folder such as `docs/images/` after you export charts from the notebooks or slides.
+Gardein sits in a crowded and rapidly shifting plant-based frozen category. Management needed to understand:
 
-<!-- Screenshot: executive summary or key market-share chart -->
-![Market share overview](docs/images/PLACEHOLDER_market_share.png)
+1. **Where is Gardein winning and losing** relative to Morningstar Farms and the broader competitive set?
+2. **Which product and pricing levers** (pack size, price per unit, distribution, meat source, flavor) most influence dollar sales?
+3. **Which U.S. geographies** offer the strongest growth opportunity — and why?
 
-<!-- Screenshot: regression / model summary or coefficient plot -->
-![Model summary](docs/images/PLACEHOLDER_regression_summary.png)
+## 🔍 Approach
 
-<!-- Screenshot: map or regional sales visualization -->
-![Geographic analysis](docs/images/PLACEHOLDER_geography.png)
+| Stage | Methods |
+|---|---|
+| **Data** | Multi-year retail POS extracts for Gardein, Morningstar Farms, and competitor brands (Nielsen-style syndicated data format) |
+| **Cleaning** | Missing-value treatment, duplicate checks, column pruning |
+| **Feature engineering** | Parsed product description strings → franchise, meat source, product type, flavor, pack size (ounces) |
+| **EDA** | Univariate + bivariate distributions; category and sub-segment share |
+| **Multicollinearity** | VIF review, consolidation / removal of collinear predictors |
+| **Modeling** | Multivariate OLS regression on dollar sales with controls for distribution (ACV), price, pack size, product, brand, meat source, and geography |
+| **Geographic analysis** | Regional cuts (California, Northeast, Total US Multi-Outlet + Convenience) aligned to regression region effects |
 
-**Tip:** Keep images **under ~1–2 MB** each for fast GitHub loading; use PNG for slides, WebP if you optimize.
+## 📊 Key Findings *(see the [Final Report](./FINAL%20REPORT.pdf) for details)*
+
+*High-level takeaways — for full coefficients, significance tests, and recommendations, see the PDF report and slide deck.*
+
+- Dollar sales are driven most strongly by **ACV-weighted distribution** and **price per unit**, with meaningful secondary effects from **pack size** and **product type**.
+- **Gardein vs Morningstar Farms** positioning diverges on health messaging, ingredient innovation, and sustainability — each with distinct implications for shelf strategy.
+- Regional performance shows asymmetric opportunity: certain geographies over-index on the category but under-index on Gardein, flagging clear white-space for distribution expansion.
 
 ---
 
-## Repository layout
+## 🖼️ Visuals
 
-| Path | Description |
-|------|-------------|
-| `Univariate Analysis - Predictive Modeling -2024.ipynb` | Univariate exploration and predictive modeling workflow on category data. |
-| `Geography_based_visualization.ipynb` | Regional filters and geography-focused charts (multi-year panels). |
-| `Geography_based_visualization (1).ipynb` | Alternate copy of the geography notebook (clean up duplicates before sharing if desired). |
-| `reg (1).ipynb` | Regression-focused notebook. |
-| `FINAL GROUP 7.docx` | Written report (objectives, EDA, regression, recommendations). |
-| `Group_7.pptx` | Executive slide deck. |
-| `*.xlsx` | Supporting spreadsheets (Morningstar / other brand extracts — **large files**; see Data note below). |
+> *Export 2–3 key charts (market share, regression coefficient plot, geographic map) from the notebooks or slide deck into a `docs/images/` folder and reference them here. Placeholders removed until real exports are added so the README doesn't show broken image icons.*
+
+<!-- Example, once you add real files:
+<p align="center">
+  <img src="./docs/images/market_share.png" alt="Category share Gardein vs competitors" width="80%" />
+</p>
+-->
 
 ---
 
-## Setup
+## 👥 Team (Group 7)
+
+Ashish Patil · **Isha Narkhede** · Javed Mohammed · Neha Govekar · Pallavi Sawant · Raj Nathwani
+
+### 👤 My contribution (Isha)
+
+*[Fill this section in — recruiters specifically look for it on team projects. A few concrete sentences on what you personally owned is far stronger than silence. Examples of angles to cover:]*
+
+- *What workstream did you lead or co-lead? (e.g., "Led the regression modeling and feature engineering from product description strings")*
+- *What technical pieces are yours? (e.g., "Built the VIF diagnostics and final OLS specification in `reg.ipynb`")*
+- *What did you present? (e.g., "Authored the geography slides in the final deck and the corresponding section of the written report")*
+
+---
+
+## 📁 Repository Contents
+
+| File | What it is |
+|---|---|
+| [`FINAL REPORT.pdf`](./FINAL%20REPORT.pdf) | **Written report** — objectives, EDA, regression results, recommendations (main deliverable) |
+| [`Group_7.pptx`](./Group_7.pptx) | **Executive slide deck** — summarized findings for presentation |
+| `reg.ipynb` | Regression modeling notebook — feature engineering, VIF, OLS fit, diagnostics |
+| `Geography_based_visualization.ipynb` | Regional analysis notebook — geography cuts, multi-year panels, maps |
+| `2023_MorningStar_Gardein.xlsx` | Competitor POS data — Morningstar Farms + Gardein |
+| `2023_Other_Brand_Data.xlsx` | Broader category POS data — other competing brands |
+
+## ⚙️ Reproducing the Analysis
 
 ```bash
+# Create a virtual environment
 python -m venv .venv
-.venv\Scripts\activate          # Windows
+source .venv/bin/activate        # macOS / Linux
+# .venv\Scripts\activate         # Windows
+
+# Install dependencies
 pip install pandas numpy matplotlib seaborn jupyter openpyxl scipy statsmodels
+
+# Open the notebooks
 jupyter notebook
 ```
 
-> Notebooks reference **specific Excel filenames** (e.g. frozen substitute meat POS extracts). Place those files in the same directory as the notebook, or update `pd.read_excel(...)` paths.
+The notebooks expect the Excel files in the same directory. If your copies live elsewhere, update the `pd.read_excel(...)` paths at the top of each notebook.
 
----
+## 🔒 Data Note
 
-## Data & privacy
+The POS extracts included here are syndicated retail data shared for coursework. Before forking or redistributing:
 
-- Source files can be **large** and may be **confidential**. Before pushing to GitHub:
-  - Prefer a **public sample** (aggregated or synthetic) **or**
-  - Keep raw data **local only** and document what columns are expected in this README **or**
-  - Use [Git LFS](https://git-lfs.github.com/) for large binaries if you must version them.
-- Remove IDs, internal-only paths, or credentials if any appear in notebook outputs (clear outputs: *Cell → All Output → Clear*).
+- Confirm redistribution is permitted under the original data license
+- Consider replacing with aggregated / synthetic samples for public demo purposes
+- Clear notebook outputs (`Cell → All Output → Clear`) if any contain internal identifiers
 
----
+This repository is an **academic / course deliverable**. It is not an official Conagra or Gardein publication and the findings should not be interpreted as company positions.
 
-## Key methods (short)
+## 📬 Contact
 
-1. **Cleaning:** Missing values, duplicate checks, dropping low-value columns.  
-2. **Feature engineering:** Parsed product strings for franchise, meat source, product type, flavour, pack ounces (ounces).  
-3. **Multicollinearity:** Variance Inflation Factor (VIF) review; consolidate or drop highly correlated predictors.  
-4. **Regression:** Dollar sales as a function of pack size, price per unit, ACV-weighted distribution, geography, product, brand, meat source (reference levels documented in the report).  
-5. **Geo EDA:** Cuts by Nielsen-style geographies (e.g. California, Northeast, Total US multi-outlet + convenience).
-
----
-
-## Team (Group 7)
-
-Ashish Patil · **Isha Narkhede** · Javed Mohammed · Neha Govekar · Pallavi Sawant · Raj Nathwani  
-
----
-
-## License
-
-Add a `LICENSE` file for any code you own (e.g. MIT). **Notebook outputs and underlying POS extracts** may be subject to school or partner terms—only publish what you are allowed to redistribute.
+**Isha Narkhede** · [Portfolio](https://isha-n-portfolio.netlify.app/) · [LinkedIn](https://linkedin.com/in/isha-narkhede) · ishajayant207@gmail.com
